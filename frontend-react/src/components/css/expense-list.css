@@ -1,0 +1,27 @@
+.expense-list {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+  }
+  
+  table {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    text-align: left;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .expense-list {
+      width: 95%;
+    }
+  }
+  

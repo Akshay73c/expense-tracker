@@ -1,0 +1,37 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f2f2f2; /* Adjust as needed */
+  border-bottom: 1px solid #ccc;
+}
+
+.navBar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Adjust spacing between links */
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.navBar a.active {
+  color: #007bff; /* Highlight active link */
+}
+
+.title-home {
+  font-size: 1.2rem; /* Slightly larger font for home link */
+}
+
+.title-login {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  text-align: center; /* Center text within login button */
+}
