@@ -11,7 +11,7 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`${url.BACKEND_URL}/api/user/login`, {
+    await Axios.post(`http://3.110.175.71:8080/api/user/login`, {
       username: username,
       password: password,
     })

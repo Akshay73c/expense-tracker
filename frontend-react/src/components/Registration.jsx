@@ -13,7 +13,7 @@ function Registration() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`${url.BACKEND_URL}/api/user/register`, {
+    await Axios.post(`http://3.110.175.71:8080/api/user/register`, {
       username: username,
       password: password,
       name: name,

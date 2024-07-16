@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./css/expense-list.css";
 import Axios from "axios";
-const url = require("./config");
 
 function ExpenseList({ user_id }) {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    Axios.get(`${url.BACKEND_URL}/api/user/expenses`, {
+    Axios.get(`http://3.110.175.71:8080/api/user/expenses`, {
       params: { user_id: user_id },
     })
       .then((response) => {
