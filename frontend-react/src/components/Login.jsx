@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/login.css"; // In Login.js
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
+const url = require("./config");
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -10,7 +11,7 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post("http://3.110.175.71:8080/api/user/login", {
+    await Axios.post(`${url.BACKEND_URL}/api/user/login`, {
       username: username,
       password: password,
     })

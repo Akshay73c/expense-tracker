@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/regist.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+const url = require("./config");
 
 function Registration() {
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ function Registration() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`http://3.110.175.71:8080/api/user/register`, {
+    await Axios.post(`${url.BACKEND_URL}/api/user/register`, {
       username: username,
       password: password,
       name: name,

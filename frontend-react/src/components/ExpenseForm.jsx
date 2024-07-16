@@ -1,7 +1,7 @@
 import Axios from "axios"; // Import axios
 import React, { useState } from "react";
 import "./css/expense-form.css"; // In ExpenseForm.js
-const url = require("../config");
+const url = require("./config");
 
 function ExpenseForm({ user_id }) {
   const [description, setDescription] = useState("");
