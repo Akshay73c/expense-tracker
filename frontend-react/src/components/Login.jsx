@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/login.css"; // In Login.js
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-const url = require("./config");
 
 function Login() {
   const [username, setUsername] = useState("");

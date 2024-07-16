@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./css/regist.css";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
-const url = require("./config");
 
 function Registration() {
   const [username, setUsername] = useState("");
