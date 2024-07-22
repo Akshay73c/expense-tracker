@@ -12,7 +12,6 @@ public class Expense {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int expenseId;
-
     private BigDecimal amount;
     private String category;
     private String description;

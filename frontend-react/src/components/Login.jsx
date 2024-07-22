@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./css/login.css"; // In Login.js
+import "./css/login.css";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 
@@ -10,13 +10,12 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`http://3.110.175.71:8080/api/user/login`, {
+    await Axios.post(`http://localhost:8080/api/user/login`, {
       username: username,
       password: password,
     })
       .then((response) => {
         if (response.data) {
-          // Upon successful login, redirect or update state to indicate logged-in status
           navigate(`/userPage/${response.data.user_id}`);
         } else {
           navigate("/userPage");

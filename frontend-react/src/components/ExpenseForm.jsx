@@ -1,8 +1,8 @@
-import Axios from "axios"; // Import axios
+import Axios from "axios";
 import React, { useState } from "react";
-import "./css/expense-form.css"; // In ExpenseForm.js
+import "./css/expense-form.css";
 
-function ExpenseForm({ user_id }) {
+function ExpenseForm({ user_id, onAddExpense }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState(0);
   const [category, setCategory] = useState("");
@@ -10,17 +10,15 @@ function ExpenseForm({ user_id }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await Axios.post(
-      `http://3.110.175.71:8080/api/expenses?userID=${user_id}`,
-      {
-        description,
-        amount,
-        category,
-      }
-    )
+    await Axios.post(`http://localhost:8080/api/expenses?userID=${user_id}`, {
+      description,
+      amount,
+      category,
+    })
       .then((response) => {
         setDescription("");
         setAmount(0);
+        onAddExpense({ description, amount, category });
       })
       .catch((err) => {
         console.log(err);

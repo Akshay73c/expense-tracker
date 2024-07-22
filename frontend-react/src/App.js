@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Registration from "./components/Registration";
 import Login from "./components/Login";
-import ExpenseForm from "./components/ExpenseForm";
 import NavBar from "./components/NavBar";
 import User from "./components/User";
 
@@ -13,7 +12,6 @@ function App() {
       <div className="App">
         <h1>Expense Tracker</h1>
         <NavBar />
-        {/* //Routes */}
         <Routes>
           <Route
             path="/"
@@ -29,7 +27,6 @@ function App() {
           />
           <Route path="/Login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
-          <Route path="/expenses" element={<ExpenseForm />} />
           <Route path="/userPage/:user_id" element={<User />} />
           <Route
             path="/userPage"
