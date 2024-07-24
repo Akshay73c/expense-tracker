@@ -11,7 +11,9 @@ export default function User() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    Axios.get(`${process.env.BACKEND_URL}/api/user/expenses?user_id=${user_id}`)
+    Axios.get(
+      `${process.env.REACT_APP_BACKEND_URL}/api/user/expenses?user_id=${user_id}`
+    )
       .then((response) => {
         setExpenses(response.data);
       })

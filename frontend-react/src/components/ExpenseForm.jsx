@@ -10,11 +10,14 @@ function ExpenseForm({ user_id, onAddExpense }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    await Axios.post(`http://localhost:8080/api/expenses?userID=${user_id}`, {
-      description,
-      amount,
-      category,
-    })
+    await Axios.post(
+      `${process.env.REACT_APP_BACKEND_URL}/api/expenses?userID=${user_id}`,
+      {
+        description,
+        amount,
+        category,
+      }
+    )
       .then((response) => {
         setDescription("");
         setAmount(0);

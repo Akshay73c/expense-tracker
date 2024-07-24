@@ -12,7 +12,7 @@ function Registration() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`${process.env.BACKEND_URL}/api/user/register`, {
+    await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user/register`, {
       username: username,
       password: password,
       name: name,

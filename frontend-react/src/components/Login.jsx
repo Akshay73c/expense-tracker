@@ -10,7 +10,7 @@ function Login() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    await Axios.post(`http://localhost:8080/api/user/login`, {
+    await Axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`, {
       username: username,
       password: password,
     })
